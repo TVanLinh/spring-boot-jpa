@@ -17,4 +17,5 @@ public interface IArticleService {
     void updateArticle(Article article);
 
     void deleteArticle(int articleId);
+    List<Article> getArticles(int offset, int limit);
 }

@@ -46,4 +46,9 @@ public class ArticleService implements IArticleService {
     public void deleteArticle(int articleId) {
         articleDAO.deleteArticle(articleId);
     }
+
+    @Override
+    public List<Article> getArticles(int offset, int limit) {
+        return this.articleDAO.getArticles(offset,limit);
+    }
 }

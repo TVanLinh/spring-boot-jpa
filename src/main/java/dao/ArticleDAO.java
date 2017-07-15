@@ -54,4 +54,10 @@ public class ArticleDAO implements IArticleDAO {
                 .setParameter(2, category).getResultList().size();
         return count > 0 ? true : false;
     }
+
+    @Override
+    public List<Article> getArticles(int offset, int limit) {
+        String query = "select * from articles limit "+offset+","+limit;
+        return  this.entityManager.createNativeQuery(query,Article.class).getResultList();
+    }
 }

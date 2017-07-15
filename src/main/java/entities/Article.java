@@ -43,4 +43,13 @@ public class Article implements Serializable {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "articleId=" + articleId +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                '}';
+    }
 }
